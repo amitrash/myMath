@@ -224,14 +224,17 @@ public class Polynom implements Polynom_able{
 	 * @param eps epsilon
 	 * @return
 	 */
-	public double root(double x0, double x1, double eps){
-		while(x0<=x1) {
-			if(Math.abs(f(x0))<eps) {														//if |f(x)| < esp we are done
-				return f(x0);
-			}
-			x0+=0.00001;
+	public double root(double x0, double x1, double eps) {
+		double mid = (x0 + x1)/2;
+		if(Math.abs(f(mid)) < eps) {
+			return mid;
 		}
-		return Integer.MAX_VALUE;
+		if(mid > 0 && x0 < 0) {
+			return root(x0, mid, eps);
+		}
+		else {
+			return root(mid, x1, eps);
+		}
 	}
 	/**
 	 * returns the value of f(x)
