@@ -61,6 +61,6 @@ public class Test {
 		System.out.println(able);
 		System.out.println(p5.root(-1,15,4));      			//root
 		System.out.println(p6.f(2));						//value of f(x) in a given 'x'
-		System.out.println(p6.area(-1, 1, 0.00001));		//area
+		System.out.println(p6.area(-1, 1, 0.001));		//area
 	}
 }
