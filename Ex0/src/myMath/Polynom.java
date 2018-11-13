@@ -229,7 +229,7 @@ public class Polynom implements Polynom_able{
 		if(Math.abs(f(mid)) < eps) {
 			return f(mid);
 		}
-		if((mid > 0 && x0 < 0) || (mid < 0 && x0 > 0)) {
+		if((f(mid) > 0 && f(x0) < 0) || (f(mid) < 0 && f(x0) > 0)) {
 			return root(x0, mid, eps);
 		}
 		else {
