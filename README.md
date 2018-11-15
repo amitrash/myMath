@@ -10,3 +10,6 @@ This class represents a Polynom with add, multiply functionality, it also should
 #Junit test:
 a test in a Junit format, using asserts (assertEqual, assertTrue).
 there are some tests that check specific cases.
+
+
+*** can comtain unintended bugs.
