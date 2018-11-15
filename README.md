@@ -11,5 +11,9 @@ This class represents a Polynom with add, multiply functionality, it also should
 a test in a Junit format, using asserts (assertEqual, assertTrue).
 there are some tests that check specific cases.
 
+#plotGraph:
+this class print your Polynom as a graph and gives also min and max point.
+this class isn't originaly writen be us, it's from a Github project.
+in order to use plotGraph you need to have XChart: https://github.com/knowm/xchart.
 
 *** can comtain unintended bugs.
