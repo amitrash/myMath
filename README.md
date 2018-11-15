@@ -6,3 +6,7 @@ This class represents a simple "Monom" of shape a*x^b, where b is a real number 
 
 #Polynom:
 This class represents a Polynom with add, multiply functionality, it also should support the following: 1. Riemann's Integral: https://en.wikipedia.org/wiki/Riemann_integral 2. Finding a numerical value between two values (currently support root only f(x)=0). 3. Derivative
+
+#Junit test:
+a test in a Junit format, using asserts (assertEqual, assertTrue).
+there are some tests that check specific cases.
