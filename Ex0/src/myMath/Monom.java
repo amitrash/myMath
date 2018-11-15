@@ -48,6 +48,9 @@ public class Monom implements function{
 		if((m.charAt(nonMinus) == '-') && (nonMinus != 0)) {								//if after the '^' there is a minus throw
 			throw new RuntimeException("ERR: Monom shape is a*x^b where b is a real number and a is an integer (summed a none negative)1 " + m);
 		}
+		if(nonMinus==0 && m.indexOf('x')==1) {
+			m=m.replace("-", "-1");
+		}
 		if(!m.contains("x")) {																//checks if there is 'x' in the string
 			try {
 				this.set_coefficient(Double.parseDouble(m));								//all of the string is the coefficient
@@ -69,7 +72,7 @@ public class Monom implements function{
 			 }
 			 else if(m.indexOf("x") == m.length()-1 && m.contains("*")){					//if 'x' is in the end the power is '1'
 			   	 try {
-			   		this.set_coefficient(Integer.parseInt(m.substring(0,m.indexOf('x')-1)));//checks what is the coefficient
+			   		this.set_coefficient(Double.parseDouble(m.substring(0,m.indexOf('x')-1)));//checks what is the coefficient
 			 		this.set_power(1);
 					}
 					catch(Exception e){
@@ -78,7 +81,7 @@ public class Monom implements function{
 			 }
 			 else if(m.contains("*") && m.contains("^") && m.charAt(m.indexOf('x')-1)=='*' &&  m.charAt(m.indexOf('x')+1)=='^') { //checks if the '*' and '^' in a right place
 					try {
-						this.set_coefficient(Integer.parseInt(m.substring(0, m.indexOf('x')-1))); //sets the monom
+						this.set_coefficient(Double.parseDouble(m.substring(0, m.indexOf('x')-1))); //sets the monom
 			 			this.set_power(Integer.parseInt(m.substring(m.indexOf('x')+2)));
 					}
 					catch(Exception e){
@@ -91,7 +94,7 @@ public class Monom implements function{
 			 }
 			 else if(!m.contains("*")&&m.contains("^")&& m.charAt(m.indexOf('x')+1)=='^'){	//if the string don't contains '*'
 				 try {
-						this.set_coefficient(Integer.parseInt(m.substring(0, m.indexOf('x')))); 
+						this.set_coefficient(Double.parseDouble(m.substring(0, m.indexOf('x')))); 
 			 			this.set_power(Integer.parseInt(m.substring(m.indexOf('x')+2)));
 					}
 					catch(Exception e){
@@ -100,7 +103,7 @@ public class Monom implements function{
 			 }
 			 else if(!m.contains("*") && m.indexOf("x") == m.length()-1) {					//if the string don't contains '*' and power = 1
 				  try {
-						this.set_coefficient(Integer.parseInt(m.substring(0, m.indexOf('x')))); 
+						this.set_coefficient(Double.parseDouble(m.substring(0, m.indexOf('x')))); 
 			 			this.set_power(1);
 					}
 					catch(Exception e){

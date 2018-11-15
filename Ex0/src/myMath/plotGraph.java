@@ -12,7 +12,7 @@ import org.knowm.xchart.XYChart;
 public class plotGraph {
 	
 	public static void main(String[] args) throws IOException { 
-		Polynom p=new Polynom("0.2x^4-1.5x^3+3.0x^2-x-5");
+		Polynom p=new Polynom("0.2*x^4-1.5*x^3+3*x^2-x-5");
 		ArrayList<Double> x=new ArrayList<Double>();
 		ArrayList<Double> y=new ArrayList<Double>();
 		ArrayList<Double> xMax=new ArrayList<Double>();
