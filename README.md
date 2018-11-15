@@ -12,7 +12,7 @@ a test in a Junit format, using asserts (assertEqual, assertTrue).
 there are some tests that check specific cases.
 
 #plotGraph:
-this class print your Polynom as a graph and gives also min and max point.
+this class print your Polynom as a graph, gives also min and max point and It also shows the area of the function under the X axis.
 this class isn't originaly writen be us, it's from a Github project.
 in order to use plotGraph you need to have XChart: https://github.com/knowm/xchart.
 
