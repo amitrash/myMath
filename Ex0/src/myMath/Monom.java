@@ -44,6 +44,10 @@ public class Monom implements function{
 		m=m.replace(" ", "");																//spaces eraser
 		m=m.replace('y', 'x');																//'y' be readen like 'x'
 		m=m.toLowerCase();																	//turns 'X' to 'x'
+		int nonMinus = m.indexOf('^') +1;													//gets the index after '^'
+		if((m.charAt(nonMinus) == '-') && (nonMinus != 0)) {								//if after the '^' there is a minus throw
+			throw new RuntimeException("ERR: Monom shape is a*x^b where b is a real number and a is an integer (summed a none negative)1 " + m);
+		}
 		if(!m.contains("x")) {																//checks if there is 'x' in the string
 			try {
 				this.set_coefficient(Double.parseDouble(m));								//all of the string is the coefficient
